@@ -28,6 +28,7 @@ class firstActivity : AppCompatActivity() {
             }
             var intent = Intent(this, gameActivity::class.java)
             intent.putExtra("secretWord", secretword)
+            intent.putExtra("numofchars", numOfChars)
             startActivity(intent)
         }
     }
