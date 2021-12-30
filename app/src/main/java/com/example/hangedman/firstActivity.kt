@@ -23,7 +23,7 @@ class firstActivity : AppCompatActivity() {
             if(secretwordET.text.isEmpty()||numOfChars>30){
                 numOfChars = 0
                 secretword = ""
-                Toast.makeText(this, "Should not be empty or more than 30 characters >:(", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Should not be empty or more less 30 characters >:(", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             val intent = Intent(this, gameActivity::class.java)
