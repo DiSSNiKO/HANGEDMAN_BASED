@@ -93,6 +93,5 @@ class gameActivity : AppCompatActivity() {
         }
         return newStr
     }
-
 }
 
