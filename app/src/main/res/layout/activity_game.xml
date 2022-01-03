@@ -7,20 +7,39 @@
     tools:context=".gameActivity">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health left -- "
+            android:textSize="23sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:id="@+id/healthDisplay"
+            android:textSize="23sp"/>
+
+    </LinearLayout>
+    <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         >
 
         <ImageView
+            android:id="@+id/healthStateImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/healthstate5"
-            android:id="@+id/healthStateImage"/>
+            android:src="@drawable/healthstate5" />
 
     </LinearLayout>
 
@@ -40,7 +59,7 @@
             android:id="@+id/wordHint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="30dp"
             android:text="thisTextWillChange"
             android:textSize="25sp" />
 
@@ -58,6 +77,13 @@
             android:text="Check"
             android:textSize="30sp"
             android:id="@+id/letterCheckButton"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:id="@+id/usedLetters"
+            android:text=""/>
         <Button
             android:layout_marginTop="140dp"
             android:layout_width="wrap_content"
