@@ -27,6 +27,7 @@ class gameActivity : AppCompatActivity() {
         usedLetters = findViewById(R.id.usedLetters)
         var wordToGuess = intent?.extras?.getString("secretWord")
         var health = 5
+        var allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         healthDisplay.text = health.toString()
         var numOfChars = intent?.extras?.getInt("numofchars")
         var wordHintStr = wordHint.text.toString()
@@ -50,6 +51,8 @@ class gameActivity : AppCompatActivity() {
                 Toast.makeText(this, "Letter already used !!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            else if(chosenLetter !in allowedChars){Toast.makeText(this, "Letter already used !!", Toast.LENGTH_SHORT).show()
+            return@setOnClickListener}
             if(chosenLetter.lowercase() in wordToGuess.lowercase()){
                 var location = 1
                 for(x in wordToGuess.lowercase()){
